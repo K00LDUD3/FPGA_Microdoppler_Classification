@@ -1,4 +1,4 @@
-# FPGA_Hackathon_8-15_00
+# FPGA_Hackathon_RMTS
 
 ## Rounds
 1. *Due 15-03-2026:* Design and train an AI/ML model for a chosen real-world Edge AI application and implement the inference stage using Verilog RTL as a hardware accelerator.
