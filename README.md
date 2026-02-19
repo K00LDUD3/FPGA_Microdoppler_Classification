@@ -10,7 +10,7 @@
 [All Datasets Gathered](https://docs.google.com/document/d/1vkHs6TT6vkpA83QuUCUTUFYyGv8xxEI254Gi0cglktQ/edit?tab=t.0#heading=h.smryuagthlx9, "Private for now...")
 
 <!-- ## Datasets We Had Considered: -->
-## Further Radar Datasets Overview
+## Further Radar Dataset Overviews 
 
 ### [DARPA GOTCHA (Gotcha Volumetric SAR Data Set, Version 1.0)](https://www.sdms.afrl.af.mil/index.php?collection=gotcha)
 - Real-world airborne X-band full-polarimetric spotlight SAR phase history data (raw k-space, not processed images)
@@ -18,14 +18,14 @@
 - ~11,520 .mat files (360 segments × 8 passes × 4 polarizations), 640 MHz bandwidth
 - Urban parking lot scene with civilian vehicles (~9 cars + others) and calibration targets (trihedrals, dihedrals, tophat)
 - Multi-pass temporal/sequential nature enables coherent processing, autofocus, change detection, and 3D reconstruction
-- **Why we avoided this dataset: (TODO)** 
+- **Why we avoided this dataset:** Images are Top-Down View. We are going for an air-to-air or surface-to-air classification
 
-### [Open Radar Initiative Datasets](https://github.com/openradarinitiative/open_radar_datasets)
-- Curated index/collection of open real-world radar datasets focused on micro-Doppler signature analysis
+### [Open Radar Datasets - Final Selection For Round 1](https://github.com/openradarinitiative/open_radar_datasets)
 - Primary: Outdoor Moving Object Dataset — stationary FMCW radar, targets include persons (walking/bicycling), UAVs/drones, vehicles; .npy dict format with Doppler spectra, SNR, positions, radar params
-- Secondary: Assisted Living Dataset — indoor radar for human activity recognition (daily movements)
 - Rich metadata and viewer scripts/notebooks for exploration and benchmarking micro-Doppler classification/recognition
-- **Why we avoided this dataset: (TODO)**
+- Large Scale (>30,000 samples per class)
+- **Moving** Objects 
+
 
 ### [RadarScenes](https://radar-scenes.com/dataset/structure/)
 - Real-world automotive radar point cloud dataset from vehicle with 4 FMCW radars + documentary camera
@@ -33,6 +33,6 @@
 - Point-wise semantic annotations + track IDs in HDF5/JSON format; temporal/sequential with ego-motion compensation
 - 12 classes: passenger cars, trucks, buses, bicycles, pedestrians, animals, static environment, etc.
 - Designed for radar-based perception in diverse urban/rural scenarios
-- **Why we avoided this dataset: (TODO)**
+- **Why we avoided this dataset:** Since the RadarScenes dataset offers radar point-cloud detections instead of fixed-size radar tensors, we decided not to use it. To create CNN-compatible inputs, this would necessitate extensive preprocessing (binning, gridding, multi-sensor fusion, and clutter filtering), which would increase engineering overhead and timeline risk. A dataset with pre-structured radar tensors and balanced class distributions is more compatible with fixed-dimension convolutional architectures and effective FPGA implementation, as our goal is to design and implement a hardware-accelerated CNN on FPGA. Because of its scalability and tensor-ready format, we chose the Open Radar moving-object dataset.
 
 <!-- ## Idea Description -->
