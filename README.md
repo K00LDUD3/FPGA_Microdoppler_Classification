@@ -15,7 +15,7 @@
 ### [Open Radar Datasets - **Final Selection For Round 1**](https://github.com/openradarinitiative/open_radar_datasets)
 - Primary: Outdoor Moving Object Dataset — stationary FMCW radar, targets include persons (walking/bicycling), UAVs/drones, vehicles; .npy dict format with Doppler spectra, SNR, positions, radar params
 - Rich metadata and viewer scripts/notebooks for exploration and benchmarking micro-Doppler classification/recognition
-- Large Scale (>30,000 samples per class)
+- Large Scale (>30,000 samples per class) - Verify
 - **Moving** Objects in front of the radar
 
 ### Other Datasets
