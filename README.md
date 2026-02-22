@@ -1,4 +1,4 @@
-# FPGA_Hackathon_RMTS
+# Microdoppler Classification FPGA Deployable
 
 ## [Project Proposal](https://drive.google.com/file/d/1YoAMCLCedslQCgVstt3f-OPIzyf1Hi53/view?usp=sharing, "private for now...")
 
