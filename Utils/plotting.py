@@ -62,3 +62,36 @@ def plot_length_distribution(lengths, figsize=(8, 5), title="Length Distribution
     plt.grid(False)
     plt.tight_layout()
     plt.show()
+
+    
+def plot_metrics(metrics: dict, key_substring: str):
+    """
+    Plots metric lists whose keys contain the given substring.
+    
+    Args:
+        metrics (dict): Dictionary containing metric lists and possibly other values.
+        key_substring (str): Substring to filter metric keys.
+    """
+    plt.figure(figsize=(8, 5))
+    
+    found = False
+    
+    for key, value in metrics.items():
+        # Only consider list values
+        if isinstance(value, list) and key_substring in key:
+            # Ensure list contains numeric values
+            if all(isinstance(v, (int, float)) for v in value):
+                plt.plot(value, label=key)
+                found = True
+    
+    if not found:
+        print(f"No matching metric lists found for substring: '{key_substring}'")
+        return
+    
+    plt.xlabel("Epoch")
+    plt.ylabel("Value")
+    plt.title(f"Metrics: '{key_substring}'")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()

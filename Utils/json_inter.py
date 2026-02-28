@@ -78,6 +78,25 @@ def read_json_config(config_path: str, normalize: bool = False):
     return config
 
 
+def new_entry_version(filename):
+    if not filename.endswith(".json"):
+        filename += ".json"
+
+    filepath = LOGS + "\\" + filename
+
+    if ospath.exists(filepath):
+        with open(filepath, "r", encoding="utf-8") as f:
+            try:
+                data = jsonload(f)
+                existing_ids = [int(k) for k in data.keys() if k.isdigit()]
+                next_id = max(existing_ids) + 1 if existing_ids else 1
+            except:
+                next_id = 1
+    else:
+        next_id = 1
+
+    return f"{next_id:03d}"
+
 def load_config_as_dataframe(filename, fillna_with=""):
     if not filename.endswith(".json"):
         filename += ".json"
@@ -143,3 +162,5 @@ def get_config_by_id(json_path: str, run_id: str, as_dataframe: bool = False):
         return df
 
     return result
+
+print(new_entry_version("experiments_metadata.json"))

@@ -43,22 +43,20 @@
 
 ```text
 ├── Assets/                         -- Inputs for notebooks
-│   ├── Dataset/                        -- Raw and processed datasets
+│   ├── Dataset/                        -- Processed datasets
 │   └── Models/                         -- Neural network architecture definitions (importable modules)
 │
 ├── Logs/                           -- Experiment tracking and training logs
-│   ├── experiments.json                -- Cumulative hyperparameter + version registry
+│   ├── experiments_metadata.json       -- Model hyperparameter and architecture + version registry
+│   ├── proprocess_metadata.json        -- Processed dataset hyperparameter + version registry
 │   └── training.log                    -- Epoch-level training logs
 │
-├── Outputs/                        -- Trained model artifacts and metrics
-│   └── <model_name>/
-│       ├── epoch_x/
-│       ├── best_model.pt
-│       └── metrics.json
+├── Outputs/                        -- Trained model artifacts and metrics 
 │
 ├── Utils/                          -- Utilities for logs, outputs, and notebooks
-│   ├── log_reader.py
-│   └── output_reader.py
-│
+│   ├── json_inter.py                   -- Used to intereface (read as csv/json,append) with .json logs 
+│   └── plotting.py                     -- plotting dataset and training metrics
+│   └── paths.py                        -- Collection of paths to validate structure, ensure everything exists
+│   └── arch_logging.py                 -- Used to fetch non-default hyperparameters to log
 └── Notebooks/                      -- Experimentation notebooks
 ```

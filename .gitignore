@@ -7,3 +7,9 @@ Notebooks/PersonalReference.ipynb
 *.npz
 /Assets/Models/__pycache__
 *.pt
+Notebooks/test.ipynb
+Notebooks/Export.ipynb
+Outputs/Dataset Analysis RunID_015.txt
+Outputs/Model Analysis RunID_029.txt
+/Outputs/For RM
+Outputs/Dataset Analysis.txt
