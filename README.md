@@ -54,7 +54,7 @@
 │   ├── proprocess_metadata.json        -- Processed dataset hyperparameter + version registry
 │   └── training.log                    -- Epoch-level training logs
 │
-├── Outputs/                        -- Trained model artifacts and metrics 
+├── Outputs/Models                        -- Trained model state dictionaries and metrics 
 │
 ├── Utils/                          -- Utilities for logs, outputs, and notebooks
 │   ├── json_inter.py                   -- Used to intereface (read as csv/json,append) with .json logs 
