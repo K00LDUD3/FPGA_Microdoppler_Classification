@@ -956,5 +956,1008 @@
         "log_session_id": 47,
         "timestamp": "2026-02-28 00:38:40",
         "size": "0.0078 MB"
+    },
+    "032": {
+        "dataset_id": "015",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.001,
+        "use_class_weights": true,
+        "model_name": "cnn_test_032",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "Testing out BasicRadarCNN_Classifier64 after non-model architecture deltas",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_015.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "BasicRadarCNN_Classifier64",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')",
+                "label_smoothing": 0.05
+            }
+        },
+        "best_epoch": {
+            "epoch": 23,
+            "val_acc": 0.9689922480620154,
+            "test_acc": 0.9652278177458034
+        },
+        "log_session_id": 48,
+        "timestamp": "2026-02-28 22:21:39",
+        "size": "0.0078 MB"
+    },
+    "033": {
+        "dataset_id": "015",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.001,
+        "use_class_weights": true,
+        "model_name": "cnn_test_033",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "Testing out RadarCNN_GAP after non-model architecture deltas",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_015.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "RadarCNN_GAP",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')",
+                "label_smoothing": 0.05
+            }
+        },
+        "best_epoch": {
+            "epoch": 37,
+            "val_acc": 0.9472868217054263,
+            "test_acc": 0.9628297362110312
+        },
+        "log_session_id": 49,
+        "timestamp": "2026-02-28 22:24:09",
+        "size": "0.0078 MB"
+    },
+    "034": {
+        "dataset_id": "015",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.001,
+        "use_class_weights": true,
+        "model_name": "cnn_test_034",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "Testing out BasicRadarCNN_Classifier64 once more after previous non-model architecture deltas",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_015.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "RadarCNN_GAP_INT8",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')",
+                "label_smoothing": 0.05
+            }
+        },
+        "best_epoch": {
+            "epoch": 5,
+            "val_acc": 0.26046511627906976,
+            "test_acc": 0.045563549160671464
+        },
+        "log_session_id": 52,
+        "timestamp": "2026-02-28 22:50:02",
+        "size": "0.0078 MB"
+    },
+    "035": {
+        "dataset_id": "015",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.0001,
+        "use_class_weights": true,
+        "model_name": "cnn_test_035",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "Trying out QAT Fine Tuning",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_015.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "RadarCNN_GAP_INT8",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')",
+                "label_smoothing": 0.05
+            }
+        },
+        "best_epoch": {
+            "epoch": 46,
+            "val_acc": 0.937984496124031,
+            "test_acc": 0.9616306954436451
+        },
+        "log_session_id": 54,
+        "timestamp": "2026-02-28 23:04:51",
+        "size": "0.0078 MB"
+    },
+    "036": {
+        "dataset_id": "015",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 1e-05,
+        "use_class_weights": true,
+        "model_name": "cnn_test_035",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "Trying out QAT Fine Tuning WATCH THE FILENAME, REAL FILENAME: 035",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_015.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "RadarCNN_GAP_INT8",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')",
+                "label_smoothing": 0.05
+            }
+        },
+        "best_epoch": {
+            "epoch": 98,
+            "val_acc": 0.931782945736434,
+            "test_acc": 0.9616306954436451
+        },
+        "log_session_id": 56,
+        "timestamp": "2026-02-28 23:20:58",
+        "size": "0.0078 MB"
+    },
+    "037": {
+        "dataset_id": "015",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.001,
+        "use_class_weights": true,
+        "model_name": "cnn_lite_037",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "RESET. cnn_lite_v1 for lighter inferences.",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_015.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "DONT USE THIS - Junk.",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')",
+                "label_smoothing": 0.05
+            }
+        },
+        "best_epoch": {
+            "epoch": 45,
+            "val_acc": 0.937984496124031,
+            "test_acc": 0.9616306954436451
+        },
+        "log_session_id": 57,
+        "timestamp": "2026-03-18 13:31:32",
+        "size": "0.0078 MB"
+    },
+    "038": {
+        "dataset_id": "015",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.001,
+        "use_class_weights": true,
+        "model_name": "cnn_lite_038",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "RESET. cnn_lite_v1 for lighter inferences.",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_015.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "cnn_lite_v1",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')",
+                "label_smoothing": 0.05
+            }
+        },
+        "best_epoch": {
+            "epoch": 13,
+            "val_acc": 0.5271317829457365,
+            "test_acc": 0.670263788968825
+        },
+        "log_session_id": 58,
+        "timestamp": "2026-03-18 13:48:37",
+        "size": "0.0078 MB"
+    },
+    "039": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.003,
+        "use_class_weights": true,
+        "model_name": "cnn_lite_039",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "cnn_lite_v2 for lighter inferences on new dataset | Increase learning_rate Slightly | Remove label smoothing",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "cnn_lite_v1",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')"
+            }
+        },
+        "best_epoch": {
+            "epoch": 39,
+            "val_acc": 0.9302325581395349,
+            "test_acc": 0.9052757793764988
+        },
+        "log_session_id": 59,
+        "timestamp": "2026-03-18 14:22:54",
+        "size": "0.0117 MB"
+    },
+    "040": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.003,
+        "use_class_weights": true,
+        "model_name": "cnn_lite_040",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "cnn_lite_v2 for lighter inferences on new dataset | Increase learning_rate Slightly | Remove label smoothing",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "cnn_lite_v2",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')"
+            }
+        },
+        "best_epoch": {
+            "epoch": 53,
+            "val_acc": 0.9193798449612403,
+            "test_acc": 0.8800959232613909
+        },
+        "log_session_id": 60,
+        "timestamp": "2026-03-18 16:05:44",
+        "size": "0.0117 MB"
+    },
+    "041": {
+        "dataset_id": "022",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.003,
+        "use_class_weights": true,
+        "model_name": "cnn_lite_041",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "cnn_lite_v1 | testing on augmented dataset",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_022.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "cnn_lite_v1",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')"
+            }
+        },
+        "best_epoch": {
+            "epoch": 68,
+            "val_acc": 0.9348837209302325,
+            "test_acc": 0.9064748201438849
+        },
+        "log_session_id": 61,
+        "timestamp": "2026-03-18 16:14:06",
+        "size": "0.0117 MB"
+    },
+    "042": {
+        "dataset_id": "022",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.003,
+        "use_class_weights": true,
+        "model_name": "cnn_lite_042",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "cnn_lite_v2 | Testing on augmented dataset",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_022.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "cnn_lite_v2",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')"
+            }
+        },
+        "best_epoch": {
+            "epoch": 53,
+            "val_acc": 0.9162790697674419,
+            "test_acc": 0.8872901678657075
+        },
+        "log_session_id": 62,
+        "timestamp": "2026-03-18 16:17:23",
+        "size": "0.0117 MB"
+    },
+    "043": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.003,
+        "use_class_weights": true,
+        "model_name": "cnn_lite_043",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "cnn_lite_v3",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "cnn_lite_v3",
+        "input_dim": "1 x 48 x 128",
+        "optimizer": {
+            "Adam": {}
+        },
+        "loss": {
+            "CrossEntropyLoss": {
+                "weight": "tensor([1.2635, 0.6811, 1.1878, 0.8677], device='cuda:0')"
+            }
+        },
+        "best_epoch": {
+            "epoch": 67,
+            "val_acc": 0.9395348837209302,
+            "test_acc": 0.9088729016786571
+        },
+        "log_session_id": 63,
+        "timestamp": "2026-03-18 16:25:54",
+        "size": "0.0117 MB"
+    },
+    "044": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 2,
+        "learning_rate": 0.003,
+        "use_class_weights": true,
+        "model_name": "cnn_dist_044",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "TESTING DISTILLATION",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "model_arch": "cnn_lite_d1",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 0,
+            "val_acc": 0.5844961240310077,
+            "test_acc": 0.5299760191846523
+        },
+        "log_session_id": 64,
+        "timestamp": "2026-03-25 21:52:54",
+        "size": "0.0117 MB"
+    },
+    "045": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "learning_rate": 0.003,
+        "use_class_weights": true,
+        "model_name": "cnn_dist_045",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "START | cnn_lite_d1 arch | DISTILLATION",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_lite_d1",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 25,
+            "val_acc": 0.462015503875969,
+            "test_acc": 0.6714628297362111
+        },
+        "log_session_id": 67,
+        "timestamp": "2026-03-25 21:58:14",
+        "size": "0.0117 MB"
+    },
+    "046": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0.7,
+        "temperature": 3,
+        "learning_rate": 0.003,
+        "use_class_weights": true,
+        "model_name": "cnn_dist_046",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "START | cnn_lite_d1 arch | changed temperature",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_lite_d1",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 19,
+            "val_acc": 0.5922480620155038,
+            "test_acc": 0.5455635491606715
+        },
+        "log_session_id": 68,
+        "timestamp": "2026-03-25 22:41:29",
+        "size": "0.0117 MB"
+    },
+    "047": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0.7,
+        "nz_alpha_after": 20,
+        "temperature": 3,
+        "learning_rate": 0.003,
+        "use_class_weights": false,
+        "model_name": "cnn_dist_047",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "cnn_lite_d1 arch | V2 logits | stopped class weights",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_lite_d1",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 0,
+            "val_acc": 0.5844961240310077,
+            "test_acc": 0.5299760191846523
+        },
+        "log_session_id": 69,
+        "timestamp": "2026-03-25 22:53:03",
+        "size": "0.0117 MB"
+    },
+    "048": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0.7,
+        "nz_alpha_after": 20,
+        "temperature": 3,
+        "learning_rate": 0.003,
+        "use_class_weights": false,
+        "model_name": "cnn_dist_048",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "cnn_lite_d1 arch | V2 logits | stopped class weights",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_lite_d1",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 0,
+            "val_acc": 0.5844961240310077,
+            "test_acc": 0.5299760191846523
+        },
+        "log_session_id": 70,
+        "timestamp": "2026-03-25 22:55:20",
+        "size": "0.0117 MB"
+    },
+    "049": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0.3,
+        "nz_alpha_after": 20,
+        "temperature": 3,
+        "learning_rate": 0.003,
+        "use_class_weights": false,
+        "model_name": "cnn_dist_049",
+        "weight_decay": 0.0001,
+        "scheduler": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "cnn_lite_d1 arch | V2 logits | stopped class weights | testing for nonzero alpha after few epochs",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_distill_d2",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 13,
+            "val_acc": 0.5984496124031008,
+            "test_acc": 0.5611510791366906
+        },
+        "log_session_id": 71,
+        "timestamp": "2026-03-25 22:58:18",
+        "size": "0.0117 MB"
+    },
+    "050": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0.3,
+        "nz_alpha_after": 20,
+        "temperature": 2.0,
+        "learning_rate": 0.005,
+        "use_class_weights": false,
+        "model_name": "cnn_dist_050",
+        "weight_decay": 5e-05,
+        "scheduler": {
+            "learning_rate": 0.005,
+            "weight_decay": 5e-05,
+            "lr_factor": 0.75,
+            "lr_patience": 10,
+            "min_lr": 1e-06
+        },
+        "DELTA": "V3 logits | ",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_distill_d3",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 97,
+            "val_acc": 0.9782945736434109,
+            "test_acc": 0.9772182254196643
+        },
+        "log_session_id": 73,
+        "timestamp": "2026-03-25 23:12:02",
+        "size": "0.0117 MB"
+    },
+    "051": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0.3,
+        "nz_alpha_after": 20,
+        "temperature": 2.0,
+        "learning_rate": 0.005,
+        "use_class_weights": false,
+        "model_name": "cnn_dist_051",
+        "weight_decay": 5e-05,
+        "scheduler": {
+            "learning_rate": 0.005,
+            "weight_decay": 5e-05,
+            "lr_factor": 0.75,
+            "lr_patience": 10,
+            "min_lr": 1e-06
+        },
+        "DELTA": "V3 logits | Aggressive resizing with d5 arch (double conv)",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_distill_d6",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 99,
+            "val_acc": 0.586046511627907,
+            "test_acc": 0.6666666666666666
+        },
+        "log_session_id": 75,
+        "timestamp": "2026-03-25 23:17:46",
+        "size": "0.0156 MB"
+    },
+    "052": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0.3,
+        "nz_alpha_after": 20,
+        "temperature": 2.0,
+        "learning_rate": 0.005,
+        "use_class_weights": false,
+        "model_name": "cnn_dist_052",
+        "weight_decay": 5e-05,
+        "scheduler": {
+            "learning_rate": 0.005,
+            "weight_decay": 5e-05,
+            "lr_factor": 0.75,
+            "lr_patience": 10,
+            "min_lr": 1e-06
+        },
+        "DELTA": "V3 logits | convolution layer channel reduction with d4",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_distill_d4",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 29,
+            "val_acc": 0.5844961240310077,
+            "test_acc": 0.5299760191846523
+        },
+        "log_session_id": 76,
+        "timestamp": "2026-03-25 23:20:22",
+        "size": "0.0156 MB"
+    },
+    "053": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0,
+        "nz_alpha_after": 0,
+        "temperature": 1.0,
+        "learning_rate": 0.005,
+        "use_class_weights": false,
+        "model_name": "cnn_dist_053",
+        "weight_decay": 5e-05,
+        "scheduler": {
+            "learning_rate": 0.005,
+            "weight_decay": 5e-05,
+            "lr_factor": 0.75,
+            "lr_patience": 10,
+            "min_lr": 1e-06
+        },
+        "DELTA": "V3 logits | Dry run of d4",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_distill_d4",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 0,
+            "val_acc": 0.5844961240310077,
+            "test_acc": 0.5299760191846523
+        },
+        "log_session_id": 77,
+        "timestamp": "2026-03-25 23:25:05",
+        "size": "0.0156 MB"
+    },
+    "054": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0,
+        "nz_alpha_after": 0,
+        "temperature": 1.0,
+        "learning_rate": 0.005,
+        "use_class_weights": true,
+        "model_name": "cnn_dist_054",
+        "weight_decay": 5e-05,
+        "scheduler": {
+            "learning_rate": 0.005,
+            "weight_decay": 5e-05,
+            "lr_factor": 0.75,
+            "lr_patience": 10,
+            "min_lr": 1e-06
+        },
+        "DELTA": "V3 logits | Dry run of d4 with class weights",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_distill_d4",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 0,
+            "val_acc": 0.5844961240310077,
+            "test_acc": 0.5299760191846523
+        },
+        "log_session_id": 78,
+        "timestamp": "2026-03-25 23:28:27",
+        "size": "0.0156 MB"
+    },
+    "055": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0.1,
+        "nz_alpha_after": 20,
+        "temperature": 1.0,
+        "learning_rate": 0.005,
+        "use_class_weights": true,
+        "model_name": "cnn_dist_055",
+        "weight_decay": 1e-05,
+        "scheduler": {
+            "learning_rate": 0.005,
+            "weight_decay": 1e-05,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "V3 logits | ",
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_distill_d4",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 10,
+            "val_acc": 0.5937984496124031,
+            "test_acc": 0.5611510791366906
+        },
+        "log_session_id": 80,
+        "timestamp": "2026-03-25 23:33:09",
+        "size": "0.0156 MB"
+    },
+    "056": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0.1,
+        "nz_alpha_after": 20,
+        "temperature": 1.0,
+        "learning_rate": 0.001,
+        "use_class_weights": true,
+        "model_name": "cnn_dist_056",
+        "weight_decay": 1e-05,
+        "scheduler": {
+            "learning_rate": 0.005,
+            "weight_decay": 1e-05,
+            "lr_factor": 0.5,
+            "lr_patience": 5,
+            "min_lr": 1e-06
+        },
+        "DELTA": "V3 logits | ",
+        "Terminated?": 0,
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_distill_d3",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 98,
+            "val_acc": 0.9643410852713178,
+            "test_acc": 0.9688249400479616
+        },
+        "log_session_id": 81,
+        "timestamp": "2026-03-25 23:41:27",
+        "size": "0.0156 MB"
+    },
+    "057": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0.3,
+        "nz_alpha_after": 20,
+        "temperature": 2.0,
+        "learning_rate": 0.005,
+        "use_class_weights": false,
+        "model_name": "cnn_dist_057",
+        "weight_decay": 5e-05,
+        "scheduler": {
+            "learning_rate": 0.005,
+            "weight_decay": 5e-05,
+            "lr_factor": 0.75,
+            "lr_patience": 10,
+            "min_lr": 1e-06
+        },
+        "DELTA": "V3 logits | Checking d3_3block with same config as r_id 50",
+        "Terminated": false,
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_distill_d3_3block",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 57,
+            "val_acc": 0.9565891472868217,
+            "test_acc": 0.9724220623501199
+        },
+        "log_session_id": 82,
+        "timestamp": "2026-03-26 10:31:00",
+        "size": "0.0156 MB"
+    },
+    "058": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 100,
+        "alpha": 0.3,
+        "nz_alpha_after": 20,
+        "temperature": 2.0,
+        "learning_rate": 0.005,
+        "use_class_weights": false,
+        "model_name": "cnn_dist_058",
+        "weight_decay": 5e-05,
+        "scheduler": {
+            "learning_rate": 0.005,
+            "weight_decay": 5e-05,
+            "lr_factor": 0.75,
+            "lr_patience": 10,
+            "min_lr": 1e-06
+        },
+        "DELTA": "V3 logits | Checking d3_2block with same config as r_id 50",
+        "Terminated": false,
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_distill_d3_2block",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 85,
+            "val_acc": 0.8744186046511628,
+            "test_acc": 0.9424460431654677
+        },
+        "log_session_id": 83,
+        "timestamp": "2026-03-26 10:45:07",
+        "size": "0.0156 MB"
+    },
+    "059": {
+        "dataset_id": "021",
+        "batch_size": 64,
+        "epochs": 300,
+        "alpha": 0.3,
+        "nz_alpha_after": 20,
+        "temperature": 2.0,
+        "learning_rate": 0.005,
+        "use_class_weights": false,
+        "model_name": "cnn_dist_059",
+        "weight_decay": 5e-05,
+        "scheduler": {
+            "learning_rate": 0.005,
+            "weight_decay": 5e-05,
+            "lr_factor": 0.75,
+            "lr_patience": 10,
+            "min_lr": 1e-06
+        },
+        "DELTA": "V3 logits | Checking d3_2block with same config as r_id 50",
+        "Terminated": false,
+        "dataset_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "model_save_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Outputs\\Models",
+        "num_classes": 4,
+        "parent_model_id": "029",
+        "model_arch": "cnn_distill_d3_2block",
+        "input_dim": "1 x 48 x 128",
+        "best_epoch": {
+            "epoch": 175,
+            "val_acc": 0.9085271317829458,
+            "test_acc": 0.9520383693045563
+        },
+        "log_session_id": 84,
+        "timestamp": "2026-03-26 10:56:44",
+        "size": "0.0156 MB"
     }
 }

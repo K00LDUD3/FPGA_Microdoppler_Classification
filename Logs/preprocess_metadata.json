@@ -304,5 +304,82 @@
         "file_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_019.npz",
         "timestamp": "2026-02-27 23:43:23",
         "size": "74.8908 MB"
+    },
+    "020": {
+        "window_size": 32,
+        "stride": 16,
+        "correlation_threshold": 0.25,
+        "doppler_bins": 128,
+        "max_lag": 512,
+        "test_size": 0.1,
+        "val_size": 0.1,
+        "random_seed": 0,
+        "dataset_name": "radar_windows_corr_stride",
+        "file_name": "dataset",
+        "augmentations": {
+            "use_augmentation": true,
+            "aug_amp_scale": true,
+            "aug_noise": true,
+            "aug_noise_std": 0.01,
+            "aug_time_shift": true,
+            "aug_time_shift_max": 2,
+            "aug_freq_shift": false,
+            "aug_freq_shift_max": 1
+        },
+        "file_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_020.npz",
+        "timestamp": "2026-03-18 14:05:22",
+        "size": "74.8908 MB"
+    },
+    "021": {
+        "window_size": 48,
+        "stride": 24,
+        "correlation_threshold": 0.25,
+        "doppler_bins": 128,
+        "max_lag": 512,
+        "test_size": 0.1,
+        "val_size": 0.1,
+        "random_seed": 0,
+        "dataset_name": "radar_windows_corr_stride",
+        "file_name": "dataset",
+        "augmentations": {
+            "use_augmentation": false,
+            "aug_amp_scale": true,
+            "aug_noise": true,
+            "aug_noise_std": 0.005,
+            "aug_time_shift": true,
+            "aug_time_shift_max": 2,
+            "aug_freq_shift": false,
+            "aug_freq_shift_max": 1
+        },
+        "REMARKS": "Disabled Augmentation | Added normalization | Fixed augmentation bug.",
+        "file_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_021.npz",
+        "timestamp": "2026-03-18 14:16:02",
+        "size": "83.7761 MB"
+    },
+    "022": {
+        "window_size": 48,
+        "stride": 24,
+        "correlation_threshold": 0.25,
+        "doppler_bins": 128,
+        "max_lag": 512,
+        "test_size": 0.1,
+        "val_size": 0.1,
+        "random_seed": 0,
+        "dataset_name": "radar_windows_corr_stride",
+        "file_name": "dataset",
+        "augmentations": {
+            "use_augmentation": true,
+            "aug_amp_scale": true,
+            "aug_noise": true,
+            "aug_noise_std": 0.005,
+            "aug_time_shift": true,
+            "aug_time_shift_max": 2,
+            "aug_freq_shift": false,
+            "aug_freq_shift_max": 1
+        },
+        "REMARKS": "Augmentation | Normalization.",
+        "file_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_022.npz",
+        "timestamp": "2026-03-18 16:11:42",
+        "size": "83.7761 MB"
     }
 }

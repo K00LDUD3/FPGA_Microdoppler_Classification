@@ -1,6 +1,6 @@
 {
     "001": {
-        "window_size": 128,
+        "window_size": 48,
         "correlation_threshold": 0.25,
         "max_lag": 512,
         "test_size": 0.1,
@@ -8,9 +8,9 @@
         "random_seed": 42,
         "dataset_name": "radar_windows_corr_stride",
         "file_name": "dataset",
-        "file_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_K128_S42.npz",
+        "file_path": "D:\\Repos\\FPGA_Radar_Microdoppler_Classification\\Assets\\Dataset\\Processed\\radar_windows_corr_stride_K48_S24_debugged.npz",
         "timestamp": "2026-02-24 19:50:38",
-        "stride": 42,
+        "stride": 24,
         "size_MB": 4604.8
     }
 }
